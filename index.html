@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chat with PHP</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/spinner.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<div class="container">
+    <div class="col-12 mt-5" id="chat-wrapper">
+        <div id="chat-container" class="col-12 mt-2 pt-2"></div>
+        <form id="chat-form" class="mt-4">
+            <div class="form-row">
+                <div class="form-group col-md-1">
+                    <input type="color" class="form-control" id="color">
+                </div>
+                <div class="form-group col-md-2">
+                    <input type="text" class="form-control" id="name" placeholder="You're Name" autocomplete="off">
+                </div>
+                <div class="form-group col-md-8">
+                    <input type="text" class="form-control" id="message" placeholder="You're Message">
+                </div>
+                <div class="form-group col-md-1 text-right">
+                    <button type="submit" class="btn btn-outline-primary">Send</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div id="loader-wrapper">
+    <div id="loader"></div>
+</div>
+<script src="assets/js/jquery-3.5.1.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/sweetalert.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

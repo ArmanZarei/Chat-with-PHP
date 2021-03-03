@@ -1,0 +1,14 @@
+#chat-wrapper * {
+    font-family: sans-serif;
+}
+
+#chat-wrapper {
+    height: 700px;
+    overflow: hidden;
+}
+
+#chat-container {
+    height: 600px;
+    box-shadow: 0px 0px 6px 1px #b7b7b7;
+    border-radius: 5px;
+}
