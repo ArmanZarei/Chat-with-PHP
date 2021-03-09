@@ -1,4 +1,6 @@
-const webSocketUrl = "ws://192.168.1.11:8080/Chat-with-PHP/server.php";
+let currentHref = window.location.href + "server/";
+currentHref = currentHref.replace(/(http|https)/, 'ws');
+const webSocketUrl = currentHref;
 
 const swalWrapper = {
     _swalAlert: function (title, text, icon) {
@@ -22,13 +24,19 @@ $(document).ready(function () {
         _container: $("#chat-container"),
         createMessage: function (color, name, msg) {
             this._container.append(`<p class="mb-0"><span class="font-weight-bold" style=\"color: ${color}\">${name}: </span> ${msg}</p>`);
+            this.scrollDown();
         },
         createConnectMessage: function () {
             this._container.append('<p class="mb-0 text-success">Somebody joined the chat</p>')
+            this.scrollDown();
         },
         createDisconnetMessage: function (name) {
             name = name ? name : "Somebody";
             this._container.append(`<p class="mb-0 text-danger">${name} left the chat</p>`)
+            this.scrollDown();
+        },
+        scrollDown: function () {
+            this._container.scrollTop(this._container.prop('scrollHeight'))
         }
     };
 

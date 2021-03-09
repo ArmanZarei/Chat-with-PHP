@@ -3,12 +3,13 @@
 }
 
 #chat-wrapper {
-    height: 700px;
+    height: 500px;
     overflow: hidden;
 }
 
 #chat-container {
-    height: 600px;
+    height: 400px;
     box-shadow: 0px 0px 6px 1px #b7b7b7;
     border-radius: 5px;
+    overflow-y: auto;
 }

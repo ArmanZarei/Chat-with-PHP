@@ -1,0 +1,15 @@
+version: "3"
+services:
+  server:
+    container_name: chat-server
+    build: ./server
+  nginx:
+    container_name: chat-nginx
+    image: nginx:latest
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./client:/client
+    depends_on:
+      - server
